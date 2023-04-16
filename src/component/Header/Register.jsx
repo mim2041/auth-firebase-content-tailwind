@@ -18,7 +18,11 @@ const Register = () => {
 
         createUser(email, password)
         .then(result => {
-            
+            const loggedUser = result.user;
+            console.log(loggedUser);
+        })
+        .catch(error => {
+            console.log(error);
         })
     }
 
@@ -52,7 +56,7 @@ const Register = () => {
                     </label>
                     </div>
                     <div className="form-control mt-6">
-                    <button className="btn btn-primary">Login</button>
+                    <button className="btn btn-primary">Register</button>
                     </div>
                 </form>
                 </div>
