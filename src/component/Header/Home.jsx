@@ -3,6 +3,7 @@ import { AuthContext } from '../Providers/AuthProviders';
 
 const Home = () => {
     const user = useContext(AuthContext);
+    console.log(user);
     return (
         <div>
             <h2>This is home {user && <span>{user.displayName}</span>}</h2>
